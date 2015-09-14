@@ -3,4 +3,8 @@
 *.bbl
 *.blg
 *.toc
+*.lof
+*.lot
+*.pdf
+*.synctex.gz
 .DS_Store
