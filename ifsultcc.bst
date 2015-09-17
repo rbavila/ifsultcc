@@ -352,7 +352,7 @@ FUNCTION {format.names}
 			pop$ pop$ names " et~al." *
 			n 'i :=
 		}{
-			"u" change.case$ swap$
+			"\MakeUppercase{" swap$ "}" * * swap$
 			i "{, f.}{~vv}" format.name$ *
 			names swap$ add.to.namelist
 		} if$ 'names :=
@@ -392,7 +392,7 @@ FUNCTION {format.family.names}
 			pop$ names " et~al." *
 			n 'i :=
 		}{
-			"u" change.case$
+			"\MakeUppercase{" swap$ "}" * *
 			names swap$ add.to.namelist
 		} if$ 'names :=
 		#1 i + 'i :=
@@ -516,13 +516,13 @@ FUNCTION {get.adjusted.pages}
 
 %=======================================================================
 % Coloca a primeira palavra do titulo em letras maiusculas e o resto em
-% minusculas. Esta funcao e' usada para gerar referencias cuja entrada e' pelo
-% titulo.
+% minusculas. Esta funcao e' usada para gerar referencias cuja entrada e'
+% pelo titulo.
 %=======================================================================
 FUNCTION {format.entrytitle}
 {
-	#0 title format.title
-	extract.first.word "u" change.case$
+	#0 title format.title extract.first.word
+	"\MakeUppercase{" swap$ "}" * *
 	swap$ * 
 }
 
@@ -902,7 +902,8 @@ FUNCTION {extract.proceedings.type}
 FUNCTION {process.proceedings.booktitle}
 {
 	extract.proceedings.type
-	duplicate$ find.first.uppercase.char split.string "u" change.case$
+	duplicate$ find.first.uppercase.char split.string
+		"\MakeUppercase{" swap$ "}" * *
 	swap$ extract.first.number
 	duplicate$ empty$
 		'pop$
@@ -1086,7 +1087,7 @@ FUNCTION {manual}
 			format.edition add.to.item
 			format.publication add.to.item
 		}{
-			organization "u" change.case$ add.to.item
+			"\MakeUppercase{" organization "}" * * add.to.item
 			#1 title format.title add.to.item
 			format.edition add.to.item
 			format.manual.publication add.to.item
@@ -1288,9 +1289,9 @@ FUNCTION {reverse.adjust.label}
 }
 
 %=======================================================================
-% Retorna na pilha o string a ser usado para a construcao do label. Quase sempre
-% sera' o sobrenome do primeiro autor, mas para alguns tipos de referencia pode
-% ser o editor, a entidade ou o titulo
+% Retorna na pilha o string a ser usado para a construcao do label.
+% Quase sempre sera' o sobrenome do primeiro autor, mas para alguns tipos
+% de referencia pode ser o editor, a entidade ou o titulo
 %=======================================================================
 FUNCTION {get.labelstring}
 {
@@ -1301,7 +1302,7 @@ FUNCTION {get.labelstring}
 			editor format.family.names
 		}{
 			title empty$ not {
-				title "u" change.case$
+				"\MakeUppercase{" title "}" * * 
 			}{
 				key empty$ not {
 					key
@@ -1323,7 +1324,7 @@ FUNCTION {get.labelstring}
 	type$ "manual" =
 	organization empty$ not
 	and {
-		pop$ organization "u" change.case$
+		pop$ "\MakeUppercase{" organization "}" * *
 	} 'skip$ if$
 }
 
