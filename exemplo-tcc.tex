@@ -4,11 +4,13 @@
 % Este documento é um exemplo de uso do modelo LaTeX de TCCs do IFSul.
 % O conteúdo do documento é baseado nas normas ABNT relacionadas à
 % elaboração de trabalhos acadêmicos e no Guia de Normalização do
-% Instituto (http://www.pelotas.ifsul.edu.br/portal/index.php?option=com_content&view=article&id=1181&Itemid=178).
+% Instituto (http://www.pelotas.ifsul.edu.br/portal/-
+% index.php?option=com_content&view=article&id=1181&Itemid=178).
 %
 % Os elementos textuais abaixo são apresentados na ordem em que devem
 % aparecer no documento.  Repare que nem todos são obrigatórios - isso
-% é devidamente indicado em cada caso.
+% é devidamente indicado em cada caso.  Para usá-los, basta remover
+% as marcas de comentário ('%') do início da linha.
 %
 % Este documento é de domínio público.
 %
@@ -23,20 +25,21 @@ do IFSul Campus Sapiranga}
 \orientador{Knuth, Prof.~Dr.~Donald E.}
 %\coorientador{Lamport, Prof.~Dr.~Leslie}	% opcional
 %\campus{Sapiranga} % opcional
+%\local{Sapiranga} % opcional
 \curso{Técnico em Manutenção e Suporte em Informática}
 \natureza{Trabalho de Conclusão de Curso apresentado como
-requisito parcial para a obtenção do título de Técnico em Informática
-pelo\\Instituto Federal Sul-Rio-Grandense.\\Área de concentração: Informática.}
-%\local{Sapiranga} % opcional
+	requisito parcial para a obtenção do título de
+	Técnico em Informática	pelo\\Instituto Federal Sul-Rio-Grandense.\\
+	Área de concentração: Informática.}
 \ano{2015}
 \palavrachave{TCC}
 \palavrachave{Modelo}
-\palavrachave{\LaTeX}
+\palavrachave{Formatação de documentos}
 \palavrachave{ABNT}
-\palavrachave[english]{TCC}
-\palavrachave[english]{Model}
-\palavrachave[english]{\LaTeX}
-\palavrachave[english]{ABNT}
+%\palavrachave[english]{TCC}		% inclua estas se for usado
+%\palavrachave[english]{Template}	% o resumo em inglês
+%\palavrachave[english]{Document typesetting}
+%\palavrachave[english]{ABNT}
 
 %=======================================================================
 % Início do documento.
@@ -52,7 +55,8 @@ pelo\\Instituto Federal Sul-Rio-Grandense.\\Área de concentração: Informátic
 %Aos nossos pais.
 %
 %\textit{If I have seen farther than others,\\
-%it is because I stood on the shoulders of giants.}\\
+%it is because I stood on the shoulders of giants.}
+%
 %--- \textsc{Sir Isaac Newton} % \textsc é o "small caps"
 %\end{dedicatoria}
 
@@ -61,6 +65,7 @@ pelo\\Instituto Federal Sul-Rio-Grandense.\\Área de concentração: Informátic
 %=======================================================================
 %\begin{agradecimentos}
 %Obrigado!
+%
 %\end{agradecimentos}
 
 %=======================================================================
@@ -77,19 +82,15 @@ pelo\\Instituto Federal Sul-Rio-Grandense.\\Área de concentração: Informátic
 % A recomendação é para 150 a 500 palavras.
 %=======================================================================
 \begin{abstract}
-Este documento apresenta as diretrizes para formatação de TCCs para o IFSul, Campus Sapiranga, elaboradas com base nas normas da ABNT e no Guia de Normalização do IFSul.  São apresentadas as regras de estruturação e formatação gráfica para os trabalhos, bem como algumas orientações sobre a escrita do texto em si.  O documento serve também como exemplo de aplicação dessas diretrizes --- todos os elementos de texto aqui apresentados estão formatados de acordo com as normas.  A ABNT recomenda que o Resumo, no caso de trabalhos acadêmicos, contenha de 150 a 500~palavras, e que seja utilizado parágrafo único. Deve-se usar o verbo na voz ativa e na terceira pessoa do singular.
+Este documento apresenta as diretrizes para formatação de TCCs para o IFSul, Campus Sapiranga, elaboradas com base nas normas da ABNT e no Guia de Normalização do IFSul.  São apresentadas as regras de estruturação e formatação gráfica a serem observadas na elaboração dos trabalhos, bem como algumas orientações sobre a escrita do texto em si.  O documento serve também como exemplo de aplicação dessas diretrizes --- todos os elementos de texto aqui apresentados estão formatados de acordo com as normas.  A ABNT recomenda que o Resumo, no caso de trabalhos acadêmicos, contenha de 150 a 500~palavras, e que seja utilizado parágrafo único. Deve-se usar o verbo na voz ativa e na terceira pessoa do singular.
 \end{abstract}
 
 %=======================================================================
-% Resumo em língua estrangeira (obrigatório somente para teses e
-% dissertações).
-%
-% O idioma usado aqui deve necessariamente aparecer nos parâmetros do
-% \documentclass, no início do documento.
+% Resumo em inglês (obrigatório somente para teses e dissertações).
 %=======================================================================
 %\begin{otherlanguage}{english}
 %\begin{abstract}
-%This document presents guidelines on the use of IFSul's \LaTeX\ class for academic reports and dissertations.  At the same time, it serves as an example on using the class, employing the main commands and providing further general orientations on the use of \LaTeX.  In addition, we have added guidelines for the process of writing itself, collecting tips and recommendations that contribute to the technical quality enhancement of academic monographs.  The Abstract should be composed of 150 to 500~words and must not contain any citations.  It is suggested that a single paragraph be used.
+%This document presents guidelines for the typesetting of TCC's in IFSul, Sapiranga Campus,  taking as a basis the ABNT Standards and IFSul's ``Guia de Normalização'' (Normalization Guide).  The document presents structuring and graphical formatting rules that must be observed when producing the TCC's, as well as recommendations on the writing of the text itself.  This guide also serves the purpose of being an example on how to apply such rules---every part of this text is presented in accordance to the standard.  ABNT recommends that the Abstract, in the case of academic work, should be composed of 150 to 500~words and that a single paragraph be used.  The text must be written in active voice and using the third person.
 %\end{abstract}
 %\end{otherlanguage}
 
@@ -207,33 +208,31 @@ Para subdivisões dentro das seções do texto, a ABNT prevê somente o uso de \
 \section{Figuras e Tabelas}
 O documento pode incluir ilustrações como figuras e tabelas, que devem ser inseridos o mais próximo possível do ponto em que são referenciadas no texto, podendo ser deslocadas para o topo ou a base da página quando conveniente (ex.: para não interromper um fluxo de ideias no texto).  Cada ilustração deve apresentar legenda própria com numeração e descrição de seu conteúdo.  A legenda deve ser posicionada na parte superior da figura ou tabela.  A parte inferior é reservada para indicação de fonte, que deve ser apresentada mesmo que o recurso em questão seja de autoria própria.  A Figura~\ref{fig:escrita} é um exemplo de ilustração cujo conteúdo foi obtido de outro autor.  Já a Tabela~\ref{tab:estacoes} ilustra um exemplo de autoria própria.  
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\caption{``Síndrome da tela branca'' na escrita científica}
 	\label{fig:escrita}
-	\centering%
-	\begin{minipage}{.8\textwidth}
-		\includegraphics[width=\textwidth]{escrita}
-		\fonte{\citet*{Cham12}}
-	\end{minipage}
+	\begin{area}{10cm}
+		\includegraphics{escrita.jpg}
+		\fonte{\cite{Cham12}}
+	\end{area}
 \end{figure}
 
-\begin{table}[h]
+\begin{table}[ht]
 	\caption{Períodos das estações do ano no Brasil}
 	\label{tab:estacoes}
-	\centering%
-	\begin{minipage}{.6\textwidth}
-		\begin{tabular*}{\textwidth}{ll}
+	\begin{area}{10cm}
+		\begin{tabularx}{\textwidth}{Xc}
 			\hline
-			\textbf{Meses} & \textbf{Estações do Ano}\\
+			\textbf{Período} & \textbf{Estação do Ano}\\
 			\hline
 			21 de março a 21 de junho & Outono\\
 			21 de junho a 23 de setembro & Inverno\\
 			23 de setembro a 21 de dezembro & Primavera\\
 			21 de dezembro a 21 de março & Verão\\
 			\hline
-		\end{tabular*}
-		\fonte{Elaborada pel(o)a autor(a).}
-	\end{minipage}
+		\end{tabularx}
+		\fonte{Elaborada pel(o)a autor(a)}
+	\end{area}
 \end{table}
 
 Para cada tipo de ilustração, deve ser apresentada uma lista no início do documento, dentre os chamados elementos pré-textuais.
@@ -246,72 +245,43 @@ As referências bibliográficas devem ser apresentadas em lista própria ao fina
 
 A seguir são apresentados exemplos dos tipos mais comuns de referências bibliográficas.  Para outros exemplos, consulte a NBR~6023 \cite{NBR6023:2002}.
 
-\begin{flushleft}
+% o uso de flushleft abaixo é justamente para, nestes exemplos, deixar o texto alinhado
+% somente à esquerda
 \subsection{Livros}
-%\nocite{Stallings14}
-\begin{list}{}
-	\item STALLINGS, W.;
-  BROWN, L\@. \emph{Segurança de computadores}: princípios e práticas.
-  2.~ed. Rio de Janeiro: Elsevier, 2014. ISBN 978-85-352-6449-4.
-\end{list}
+\begin{flushleft}
+	STALLINGS, W.; BROWN, L\@. \emph{Segurança de computadores}: princípios e práticas. 2.~ed. Rio de Janeiro: Elsevier, 2014. ISBN 978-85-352-6449-4.
+\end{flushleft}
 
 \subsection{Artigos em periódicos}
-%\nocite{Hayes08}
-\begin{list}{}
-	\item HAYES, B\@. Cloud computing.
-  \emph{Communications of the ACM}, New York, v.~51, n.~7, p.~9--11, July~2008.
-\end{list}
+\begin{flushleft}
+	HAYES, B\@. Cloud computing. \emph{Communications of the ACM}, New York, v.~51, n.~7, p.~9--11, July~2008.
+\end{flushleft}
 
 \subsection{Artigos em eventos}
-%\nocite{Anderson95, Borba12b}
-\begin{list}{}
-	\item ANDERSON, T.~E.
-  et~al\@. Serverless network file systems. In: SYMPOSIUM ON OPERATING SYSTEMS
-  PRINCIPLES, 15., 1995, Copper Mountain Resort, Colorado.
-  \emph{Proceedings{\ldots}} [S.l.:~s.n.], 1995. p.~109--126.
-  	\item BORBA, M.~de;
-  {\'A}VILA, R.~B\@. Acesso gratuito a {I}nternet - uma proposta de cadastro e
-  autentica{\c{c}}{\~a}o para acesso {\`a} {I}nternet em locais p{\'u}blicos.
-  In: ESCOLA REGIONAL DE REDES DE COMPUTADORES, ERRC, 10., 2012, Pelotas, RS
- \@. \emph{Anais{\ldots}} [S.l.:~s.n.], 2012.
-\end{list}
+\begin{flushleft}
+	ANDERSON, T.~E. et~al. Serverless network file systems. In: SYMPOSIUM ON OPERATING SYSTEMS PRINCIPLES, 15., 1995, Copper Mountain Resort, Colorado. \emph{Proceedings{\ldots}} [S.l.:~s.n.], 1995. p.~109--126.\\[.5cm]
+
+  	BORBA, M.~de; ÁVILA, R.~B\@. Acesso gratuito a Internet -- uma proposta de cadastro e autenticação para acesso à Internet em locais públicos. In: ESCOLA REGIONAL DE REDES DE COMPUTADORES, ERRC, 10., 2012, Pelotas, RS\@.\emph{Anais{\ldots}} [S.l.:~s.n.], 2012.
+\end{flushleft}
 
 \subsection{Trabalhos de conclusão de curso, dissertações e teses}
-%\nocite{Teixeira09, Flaumann05}
-\begin{list}{}
-	\item TEIXEIRA, M.~A\@.
-  \emph{lattes2latex}: uma ferramenta para conversão de currículos {L}attes
-  em documentos {L}a{T}e{X}. 2009. 82~p. Trabalho de Conclus{\~a}o de Curso
-  (Bacharelado em Ci{\^e}ncia da Computa{\c{c}}{\~a}o) --- Instituto de
-  Inform{\'a}tica, Universidade Federal do Rio Grande do Sul, Porto Alegre,
-  2009.\\[4ex]
-  	\item FLAUMANN, F.~G\@. \emph{Uma
-  proposta de distribuição do servidor de {GNU}s em clusters}. 2005. 125~p.
-  Tese (Doutorado em Ci{\^e}ncia da Computa{\c{c}}{\~a}o) --- Programa de
-  Pós-Graduação em Computação, UFRGS, Porto~Alegre, 2005.
-\end{list}
+\begin{flushleft}
+	TEIXEIRA, M.~A\@. \emph{lattes2latex}: uma ferramenta para conversão de currículos Lattes em documentos LaTeX\@. 2009. 82~p. Trabalho de Conclusão de Curso (Bacharelado em Ciência da Computação) --- Instituto de Informática, Universidade Federal do Rio Grande do Sul, Porto Alegre, 2009.\\[.5cm]
+	
+	FLAUMANN, F.~G\@. \emph{Uma proposta de distribuição do servidor de GNUs em clusters}. 2005. 125~p.  Tese (Doutorado em Ciência da Computação) --- Programa de Pós-Graduação em Computação, UFRGS, Porto~Alegre, 2005.
+\end{flushleft}
 
 \subsection{Relatórios técnicos, manuais e normas}
-%\nocite{Hexsel04, NBR14724:2011}
-\begin{list}{}
-	\item HEXSEL, R.~A\@. \emph{Pequeno manual da
-  escrita técnica}. Curitiba: Departamento de Informática, Universidade
-  Federal do Paraná, 2004. Dispon{\'\i}vel em:
-  $<$http://www.inf.ufpr.br/pos/techreport/RT\_DINF004\_2004.pdf$>$. Acesso em:
-  set.~2015. (RT-DINF~004/2004).\\[4ex]
-  	\item \MakeUppercase{Associação Brasileira de Normas Técnicas}.
-  \emph{{NBR}~14724}: informação e documentação -- trabalhos acadêmicos --
-  apresentação. Rio de Janeiro, 2011.
-\end{list}
+\begin{flushleft}
+	HEXSEL, R.~A\@. \emph{Pequeno manual da escrita técnica}. Curitiba: Departamento de Informática, Universidade Federal do Paraná, 2004. Disponível em: $<$http://www.inf.ufpr.br/pos/techreport/RT\_DINF004\_2004.pdf$>$. Acesso em: set.~2015. (RT-DINF~004/2004).\\[.5cm]
+	
+	ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. \emph{{NBR}~14724}: informação e documentação -- trabalhos acadêmicos -- apresentação. Rio de Janeiro, 2011.
+\end{flushleft}
 
 \subsection{Documentos publicados na Internet}
-%\nocite{Moro11}
-\begin{list}{}
-	\item MORO, M\@. \emph{A arte de escrever artigos
-  cient{\'\i}ficos}. Dispon{\'\i}vel em:
-  $<$http://homepages.dcc.ufmg.br/{\char`~}mirella/doku.php?id=escrita$>$.
-  Acesso em: set.~2015.
-\end{list}
+\begin{flushleft}
+	MORO, M\@. \emph{A arte de escrever artigos científicos}. Disponível em:
+  $<$http://homepages.dcc.ufmg.br/{\char`~}mirella/doku.php?id=escrita$>$.  Acesso em: set.~2015.
 \end{flushleft}
 
 \section{Citações}
@@ -343,149 +313,28 @@ Os elementos pré-textuais precedem a parte principal do texto, localizando-se a
 	\item sumário.
 \end{itemize}
 
-Veja no início deste documento quais informações apresentar e como formatar cada um dos itens.
+Veja no início deste documento quais informações apresentar e como formatar cada um dos itens. 
 
+%=======================================================================
+% Referências bibliográficas
+%=======================================================================
 \bibliography{exemplo-tcc}
-\end{document}
 
 %=======================================================================
-\chapter{Introdução}
-
-% as epígrafes nos capítulos são opcionais
-\epigrafecap{The reasonable man adapts himself to the world; the unreasonable one persists in trying to adapt the world to himself. Therefore all progress depends on the unreasonable man.}{George Bernard Shaw}
-
-Conforme \citet*{Hexsel11}, a introdução tem o objetivo de ``\emph{introduzir} o material que vai ser apresentado em mais detalhe nas seções subseqüentes''. Na introdução você deve contextualizar o problema e mostrar por que vale a pena resolvê-lo. Você deve apresentar a solução proposta e mostrar o seu diferencial em relação aos trabalhos relacionados. Observe, porém, que na introdução você deve apenas tratar do O QUÊ e PORQUÊ, sem tratar do como \cite{Hexsel11}, que deve ser explicado na seção que descreve o trabalho desenvolvido.
-
-Geralmente, a introdução tem uma estrutura similar ao resumo e deve apresentar:
-\begin{itemize}
-	\item \textbf{Contexto e motivação:} Aqui você deve apresentar o contexto do trabalho (área de que ele se trata) e uma motivação para trabalhar nesse assunto.
-	\item \textbf{Problema:} Aqui você vai apresentar um problema, uma lacuna, observada na área e que você pretende tratar. Você deve se perguntar aqui: ``Que respostas estou disposto a responder?''. O problema deve ser definido claramente e delimitado em termos de espaço de tempo. Veja que essa parte visa alertar o leitor de que o que você está propondo é uma solução para um problema observado na área. 
-	\item \textbf{Objetivos:} Aqui você deve apresentar os objetivos do seu trabalho. Tome cuidado para não confundir objetivos com atividades.   Faça a si mesmo a pergunta: ``O que pretendo alcançar com a pesquisa?''. Você pode discernir entre objetivos gerais e objetivos específicos:
-	\begin{itemize}
-		\item Objetivo geral --- qual o propósito da pesquisa?
-		\item Objetivos específicos --- abertura do objetivo geral em outros menores (possíveis capítulos).
-	\end{itemize}
-	Veja abaixo um exemplo de objetivo retirado da monografia de~\citet*{Teixeira09}:
-
-	Com a possibilidade de acesso a base de dados XML gerada a partir do Sistema de Currículos Lattes e a necessidade de melhor reutilizar as informações existentes neste sistema, o presente trabalho tem como objetivo geral permitir o acesso do pesquisador a seus dados através de uma interface mais amigável: o padrão LaTeX. Para isto destacam-se os seguintes objetivos específicos:
-	\begin{alineas}
-		\item identificar e analisar o formato de especificação de currículos da Plataforma Lattes;
-		\item disponibilizar uma ferramenta para a geração de uma representação de dados intermediária a partir do formato especificado;
-		\item implementar a tradução dos dados colhidos em código LaTeX através da utilização da ferramenta criada;
-		\item analisar os resultados obtidos e as alternativas presentes no uso da ferramenta.
-	\end{alineas}
-\end{itemize}
+% Apêndice
+%=======================================================================
+%\appendix
+%\chapter{Informações Complementares}
+%
+%O Apêndice é o lugar para incluir textos complementares, que não são essenciais para o entendimento do assunto principal da monografia, mas que podem contribuir com informação relevante (por exemplo, uma prova matemática, uma conceituação básica, etc.).  Ele deve seguir o formato normal do documento.
+%
+%Existe diferença entre os Apêndices e os Anexos.  Os apêndices trazem informação escrita pelo próprio autor do trabalho, incorporando-se ao formato da monografia como um todo.  Já um anexo é um material à parte, definido/publicado por si só, e que o autor julga conveniente ser apresentado juntamente com a monografia.  Normalmente também vai apresentar formato próprio, como um artigo publicado, um folder, uma planilha, etc.
 
 %=======================================================================
-% Escrevendo o Texto
+% Anexos
 %=======================================================================
-\chapter{Escrevendo o Texto}
+%\annex
+%\chapter{Artigos Publicados}
+%\noindent (neste exemplo, o autor anexaria fisicamente a este documento --- ou seja, com cópias impressas --- os artigos que publicou ao longo do trabalho.)
 
-\section{Comandos do \LaTeX}
-Como regra geral, use os comandos tradicionais do \LaTeX\ para formatar seu texto.  Neste documento procuramos demonstrar os comandos mais comumente utilizados em monografias acadêmicas.
-
-Neste capítulo apresentamos alguns exemplos de como colocar figuras e tabelas no seu texto.
-
-\section{Ilustrações}
-
-\subsection{Legendas}
-As legendas das figuras devem se encontrar no topo da figura e não abaixo, como usualmente colocado. Abaixo da figura, é obrigatório colocar a fonte (mesmo que a figura tenha sido do próprio autor).
-
-As legendas devem conter o tipo da ilustração (Figura, Tabela, etc), seguido de numeração simples (sem número do capítulo).
-
-Toda figura deve ser citada no texto, como nos exemplos que seguem.
-
-\subsection{Figuras}
-A Figura~\ref{fig:escrita} ilustra as fases psicológicas da escrita da dissertação. Você vai se reconhecer no personagem. ;-)
-
-
-\subsection{Tabelas}
-A Tabela~\ref{tab:estacoes} é um exemplo de tabela elaborada pelo(a) próprio(a) autor(a).
-
-
-\section{Resumo}
-O resumo deve conter de 100 a 500 palavras. No resumo não deve haver citações e indica-se que essa seja a última seção do texto a ser escrita. Veja abaixo uma sugestão de organização e exemplo de resumo de \citet*{Moro11}.
-
-Sugestão (uma a três linhas para cada item):
-\begin{itemize}
-	\item Contexto geral e específico;
-	\item Questão/problema sendo investigado (propósito do trabalho);
-	\item Estado-da-arte (por que precisa de uma solução nova/melhor);
-	\item Solução (nome da proposta, metodologia básica sem detalhes, quais características respondem as questões iniciais, interpretação dos resultados, conclusões).
-\end{itemize}
-
-Exemplo (SANTOS et al., 2008 apud \citealp{Moro11}):
-\begin{quote}
-CONTEXTO: A Web é abundante em páginas que armazenam  dados de forma implícita. PROBLEMA: Em muitos casos, estes dados estão presentes em textos semiestruturados sem a presença de delimitadores explícitos e organizados em uma estrutura também implícita. SOLUÇÃO: Este artigo apresenta uma nova abordagem para extração em textos semi-estruturados baseada em Modelos de Markov Ocultos (Hidden Markov Models - HMM). ESTADO-DA-ARTE e MÉTODO PROPOSTO: Ao contrário de outros trabalhos baseados em HMM, a abordagem proposta dá ênfase à extração de metadados, além dos dados propriamente ditos. Esta abordagem consiste no uso de uma estrutura aninhada de HMMs, onde um HMM principal identifica os atributos no texto e HMMs internos, um para cada atributo, identificam os dados e metadados. Os HMMs são gerados a partir de um treinamento com uma fração de amostras da base a ser extraída. RESULTADOS: Os experimentos realizados com anúncios de classificados retirados da Web mostram que o processo de extração alcança qualidade acima de 0,97 com a medida F, mesmo se esta fração de treinamento é pequena. 
-\end{quote}
-
-%=======================================================================
-% Exemplos de Citações e Referências Bibliográficas
-%=======================================================================
-\chapter{Exemplos de Citações e Referências Bibliográficas}
-\nobibliography* % para usar o \bibentry
-Neste capítulo são apresentados exemplos de citações e referências bibliográficas.  Aqui é utilizado o pacote \texttt{bibentry}, que permite a inserção de referências no meio do texto (atenção para a diferença entre citações e referências).
-
-
-Em caso de dúvida, siga as orientações do manual da Biblioteca \cite{Biblioteca11} e, se necessário, da norma NBR~6023 \cite{NBR6023:2002}.
-
-\section{Citações}
-As citações podem ocorrer de duas formas: com os nomes dos autores inseridos no texto ou não.  Isso implica em uma construção diferente para as frases.  Por exemplo:
-\begin{itemize}
-	\item Com o nome do autor inserido no texto: ``De acordo com \citet*{Tanenbaum03}, o modelo de referência OSI foi proposto de forma tardia.''
-	\item Sem inserir o autor no texto: ``O modelo de referência OSI foi proposto de forma tardia \cite{Tanenbaum03}.''
-\end{itemize}
-
-\section{Livros}
-Seguem alguns exemplos de referências de livros:
-\begin{itemize}
-	\item \bibentry{Buford09}.
-	\item Livro com indicação de edição:\\
-	\bibentry{Kurose10ptbr}.
-\end{itemize}
-
-\section{Artigos em Periódicos}
-Os exemplos abaixo ilustram referências a artigos em periódicos.
-\begin{itemize}
-	\item \bibentry{Hayes08}.
-	\item \bibentry{Lawton08}.
-\end{itemize}
-
-\section{Artigos em Conferências}
-\begin{itemize}
-	\item \bibentry{Laadan10}.
-	\item \bibentry{Anderson95}.
-\end{itemize}
-
-\section{Teses e Dissertações}
-Seguem algumas referências a trabalhos acadêmicos, como teses, dissertações, trabalhos de conclusão de curso, etc.
-\begin{itemize}
-	\item \bibentry{Teixeira09}.
-	\item \bibentry{Flaumann05}.
-\end{itemize}
-
-%=======================================================================
-% Referências
-%=======================================================================
-
-%=======================================================================
-% Exemplo de Apêndice
-% O Apêndice é utilizado para apresentar material complementar elaborado
-% pelo próprio autor.  Deve seguir as mesmas regras de formatação do
-% corpo principal do documento.
-%=======================================================================
-\appendix
-\chapter{Informações Complementares}
-
-O Apêndice é o lugar para incluir textos complementares, que não são essenciais para o entendimento do assunto principal da monografia, mas que podem contribuir com informação relevante (por exemplo, uma prova matemática, uma conceituação básica, etc.).  Ele deve seguir o formato normal do documento.
-
-%=======================================================================
-% Exemplo de Anexo
-% O Anexo é utilizado para a ``inclusão de materiais não elaborados pelo
-% próprio autor, como cópias de artigos, manuais, folders, balancetes, etc.
-% e não precisam estar em conformidade com o modelo''.
-%=======================================================================
-\annex
-\chapter{Artigos Publicados}
-Existe diferença entre os Apêndices e os Anexos.  Os apêndices trazem informação escrita pelo próprio autor do trabalho, incorporando-se ao formato da monografia como um todo.  Já um anexo é um material à parte, definido/publicado por si só, e que o autor julga conveniente ser apresentado juntamente com a monografia.  Normalmente também vai apresentar formato próprio, como um artigo publicado, um folder, uma planilha, etc.
 \end{document}

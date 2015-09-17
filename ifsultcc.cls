@@ -29,7 +29,7 @@
 % Identificacao
 %=======================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ifsultcc}[2015/09/12 v0.1 TCCs do IFSul]
+\ProvidesClass{ifsultcc}[2015/09/17 v0.1 TCCs do IFSul]
 
 %=======================================================================
 % Declaracoes básicas
@@ -41,11 +41,13 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{graphicx}
+	\setkeys{Gin}{width=\csname textwidth\endcsname}
 \RequirePackage{times}
 \RequirePackage{indentfirst}
 \RequirePackage{setspace}
 \RequirePackage{lastpage}
 \RequirePackage{natbib}
+\RequirePackage{tabularx}
 
 %=======================================================================
 % Comandos para definições principais.
@@ -193,6 +195,23 @@
 \newenvironment{listadesimbolos}[1]
 	{\begin{listof}{sym}{#1}}
 	{\end{listof}}
+
+%=======================================================================
+% Environment para inserção de figuras.
+%
+% Deve ser passado como parâmetros:
+% - a largura da figura;
+% - o label;
+% - o texto da legenda.
+% Exemplos:
+%	\begin{figura}{5cm}{fig:teste}{Exemplo de um teste}
+%=======================================================================
+\newenvironment{area}[1]{%
+	\centering%
+	\begin{minipage}{#1}%
+}{%
+	\end{minipage}\par%
+}
 
 %=======================================================================
 % Comando para citações longas.
